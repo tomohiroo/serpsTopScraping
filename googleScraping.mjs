@@ -77,7 +77,7 @@ const scraping = (maxcount, kwIndex, i, kw2) => {
           const element = result.$("div[class = 'r']")[0];
           let targetTag = result.$(element).find("a");
           let href = targetTag.attr("href");
-          console.log(href)
+          console.log(`${queryArray[i]}: ${href}`);
           const dataHtml = [idArray[i], queryArray[i], href];
           writeCsv(dataHtml, kw2, columnTopHit);
         }
